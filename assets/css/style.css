@@ -1,0 +1,13 @@
+h1, h2, p, #gamestart {
+    text-align: center;
+}
+
+.jumbotron {
+    max-height: 200px;
+}
+
+.control-label {
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 200;
+}
