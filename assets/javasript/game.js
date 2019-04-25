@@ -219,7 +219,7 @@ const myQuestions = [
             c: "The Waterboy",
             d: "Mr Deeds"
         },
-        correctAnswer: "da"
+        correctAnswer: "a"
     }
 ];
 
