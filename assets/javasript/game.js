@@ -2,6 +2,7 @@
 function startTimer() {
     var counter = 45;
     setInterval(function () {
+        //decrements the counter variable
         counter--;
         if (counter >= 0) {
             span = document.getElementById("timer");
@@ -12,7 +13,6 @@ function startTimer() {
             clearInterval(counter);
             $("#time-results").html("<h3>YOU RAN OUT OF TIME!!!!</h3>");
             showResults();
-            
         }
     }, 1000);
 }
@@ -176,6 +176,50 @@ const myQuestions = [
             d: "Iron Man"
         },
         correctAnswer: "d"
+    },
+    {
+        question: "-2 pints of Tommy Lee Jones -5 3/4 cups of special serum -1 shield (preferably made of vibranium) -1 colorful suit -41,000 icicles One of these movies listed below can be made by combining these ingredients. Which movie is it?",
+
+        answers: {
+            a: "Thor",
+            b: "Captain America: The First Avenger",
+            c: "X-Men: First Class",
+            d: "Iron Man"
+        },
+        correctAnswer: "d"
+    },
+    {
+        question: "-2 pints of Tommy Lee Jones -5 3/4 cups of special serum -1 shield (preferably made of vibranium) -1 colorful suit -41,000 icicles One of these movies listed below can be made by combining these ingredients. Which movie is it?",
+
+        answers: {
+            a: "Thor",
+            b: "Captain America: The First Avenger",
+            c: "X-Men: First Class",
+            d: "Iron Man"
+        },
+        correctAnswer: "d"
+    },
+    {
+        question: "-2 pints of Tommy Lee Jones -5 3/4 cups of special serum -1 shield (preferably made of vibranium) -1 colorful suit -41,000 icicles One of these movies listed below can be made by combining these ingredients. Which movie is it?",
+
+        answers: {
+            a: "Thor",
+            b: "Captain America: The First Avenger",
+            c: "X-Men: First Class",
+            d: "Iron Man"
+        },
+        correctAnswer: "d"
+    },
+    {
+        question: "-2 pints of Tommy Lee Jones -5 3/4 cups of special serum -1 shield (preferably made of vibranium) -1 colorful suit -41,000 icicles One of these movies listed below can be made by combining these ingredients. Which movie is it?",
+
+        answers: {
+            a: "Thor",
+            b: "Captain America: The First Avenger",
+            c: "X-Men: First Class",
+            d: "Iron Man"
+        },
+        correctAnswer: "d"
     }
 ];
 
@@ -193,9 +237,11 @@ function buildQuiz() {
             const answers = [];
 
             for (letter in currentQuestion.answers) {
-
+               //loop that will push out each question and answer choices to the screen
                 answers.push(
+                    //radio dials for possible answers
                     `<label>
+                    
                       <input type="radio" name="question${questionNumber}"
                 value="${letter}">
 
@@ -207,7 +253,7 @@ function buildQuiz() {
                     </label>`
                 );
             }
-
+            //pushes the question and answers to the page
             output.push(
                 `<div class="question"> ${currentQuestion.question} </div>
                 <div class="answers"> ${answers.join('')} </div>`
@@ -215,6 +261,7 @@ function buildQuiz() {
         }
 
     );
+    //displays the questions and answers
     $("#quiz").html(output.join(''));
     
 }
