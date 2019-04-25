@@ -1,6 +1,6 @@
 //timer
 function startTimer() {
-    var counter = 90;
+    var counter = 100;
     setInterval(function () {
         //decrements the counter variable
         counter--;
@@ -220,6 +220,28 @@ const myQuestions = [
             d: "Mr Deeds"
         },
         correctAnswer: "a"
+    },
+    {
+        question: "This 2005 movie is about ice skating. Which of these movies am I talking about?",
+
+        answers: {
+            a: "Ice Castles",
+            b: "Ice Princess",
+            c: "Ice Dutchess",
+            d: "Ice Queen"
+        },
+        correctAnswer: "b"
+    },
+    {
+        question: "Using airplanes as a link, which of these films has the protagonist pretending to be a Pan Am pilot, among other things?",
+
+        answers: {
+            a: "The Terminal",
+            b: "Up In the Air",
+            c: "Catch Me if You Can",
+            d: "Airplace"
+        },
+        correctAnswer: "c"
     }
 ];
 
