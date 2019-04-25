@@ -1,6 +1,6 @@
 //timer
 function startTimer() {
-    var counter = 45;
+    var counter = 90;
     setInterval(function () {
         //decrements the counter variable
         counter--;
@@ -175,51 +175,51 @@ const myQuestions = [
             c: "X-Men: First Class",
             d: "Iron Man"
         },
-        correctAnswer: "d"
+        correctAnswer: "b"
     },
     {
-        question: "-2 pints of Tommy Lee Jones -5 3/4 cups of special serum -1 shield (preferably made of vibranium) -1 colorful suit -41,000 icicles One of these movies listed below can be made by combining these ingredients. Which movie is it?",
+        question: "Released in 1992, this historical epic was acclaimed for its cinematography and musical score. It is based on the book by James Fenimore Cooper and set during the French and Indian War. The film stars Daniel Day-Lewis and Madeleine Stowe. Name it.",
 
         answers: {
-            a: "Thor",
-            b: "Captain America: The First Avenger",
-            c: "X-Men: First Class",
-            d: "Iron Man"
+            a: "Patriot",
+            b: "1776",
+            c: "The New World",
+            d: "The Last of the Mohicans"
         },
         correctAnswer: "d"
     },
     {
-        question: "-2 pints of Tommy Lee Jones -5 3/4 cups of special serum -1 shield (preferably made of vibranium) -1 colorful suit -41,000 icicles One of these movies listed below can be made by combining these ingredients. Which movie is it?",
+        question: "This 1984 ghostly film starred two 'Saturday Night Live' alumni and a woman who encountered some very strange ghosts.",
 
         answers: {
-            a: "Thor",
-            b: "Captain America: The First Avenger",
-            c: "X-Men: First Class",
-            d: "Iron Man"
+            a: "The Ghost Within",
+            b: "Ghostbusters",
+            c: "Ghost Stories",
+            d: "Ghost"
         },
-        correctAnswer: "d"
+        correctAnswer: "b"
     },
     {
-        question: "-2 pints of Tommy Lee Jones -5 3/4 cups of special serum -1 shield (preferably made of vibranium) -1 colorful suit -41,000 icicles One of these movies listed below can be made by combining these ingredients. Which movie is it?",
+        question: "-100 oz. of Peter Jackson -1/2 cup of Gollum -1/2 cup of Smeagol -1 crown -11 Oscars *Side note: To be cooked over the fires of Mount Doom. Which of the following movies can be made by using all of the ingredients listed above?",
 
         answers: {
-            a: "Thor",
-            b: "Captain America: The First Avenger",
-            c: "X-Men: First Class",
-            d: "Iron Man"
+            a: "The Lord of the Rings: The Fellowship of the Ring",
+            b: "The Lord of the Rings: The Two Towers",
+            c: "The Lord of the Rings: The Return of the King",
+            d: "The Hobbit"
         },
-        correctAnswer: "d"
+        correctAnswer: "c"
     },
     {
-        question: "-2 pints of Tommy Lee Jones -5 3/4 cups of special serum -1 shield (preferably made of vibranium) -1 colorful suit -41,000 icicles One of these movies listed below can be made by combining these ingredients. Which movie is it?",
+        question: "-4 cups of Bob Barker -1/2 of a hockey stick -1 golf ball -1 alligator eye -1 nail These ingredients can be combined to make which of the following movies?",
 
         answers: {
-            a: "Thor",
-            b: "Captain America: The First Avenger",
-            c: "X-Men: First Class",
-            d: "Iron Man"
+            a: "Happy Gilmore",
+            b: "Billy Madison",
+            c: "The Waterboy",
+            d: "Mr Deeds"
         },
-        correctAnswer: "d"
+        correctAnswer: "da"
     }
 ];
 
