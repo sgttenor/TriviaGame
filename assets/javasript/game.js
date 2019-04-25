@@ -132,6 +132,50 @@ const myQuestions = [
             d: "Megatron"
         },
         correctAnswer: "d"
+    },
+    {
+        question: "In this movie released in 2012 the world is threatened by an alien invasion. An agency known as the S.H.I.E.L.D brings some of the world's best heroes together to fight off the invasion. They have a tough time working together at first, however. Many of them have trouble getting along and their powers can at times be unpredictable. The Heroes include Iron Man, Thor, The Incredible Hulk, and Captain America. Name the movie.",
+
+        answers: {
+            a: "X-men",
+            b: "Justice League",
+            c: "Avengers",
+            d: "Watchmen"
+        },
+        correctAnswer: "c"
+    },
+    {
+        question: "In this movie, a small town sheriff in Alaska must fight the forces of evil. When his town is preyed upon by bloodsucking creatures of the night during a month without daylight, he sacrifices himself to protect his family.",
+
+        answers: {
+            a: "From Hell",
+            b: "From Dusk Till Dawn",
+            c: "Blade",
+            d: "30 Days of Night"
+        },
+        correctAnswer: "d"
+    },
+    {
+        question: " In this Harry Potter movie Harry returns to Hogwarts for his fourth year. This year the Tri-Wizard Tournament is being held at Hogwarts against two other wizard schools. The competition can become deadly and only three wizards aged 17 and older are selected. However, Harry, who is only 14, is selected as the fourth contestant. We later find out that Harry was set up. Harry must compete in all three events. After the third event Harry is transported to a graveyard where Cedric is killed and Voldemort returns. Harry fights Voldemort and barely returns to Hogwarts. Name the movie.",
+
+        answers: {
+            a: "Harry Potter and the Goblet of Fire",
+            b: "Harry Potter and the Prisoner of Azkaban",
+            c: "Harry Potter and the Chamber of Secrets",
+            d: "Harry Potter and the Order of the Phoenix"
+        },
+        correctAnswer: "a"
+    },
+    {
+        question: "-2 pints of Tommy Lee Jones -5 3/4 cups of special serum -1 shield (preferably made of vibranium) -1 colorful suit -41,000 icicles One of these movies listed below can be made by combining these ingredients. Which movie is it?",
+
+        answers: {
+            a: "Thor",
+            b: "Captain America: The First Avenger",
+            c: "X-Men: First Class",
+            d: "Iron Man"
+        },
+        correctAnswer: "d"
     }
 ];
 
@@ -196,11 +240,11 @@ function showResults() {
             numCorrect++;
 
 
-            // color the answers green
+            // color the correct answers green
             answerContainers[questionNumber].style.color = "lightgreen";
         } else {
-            // if answer is wrong or blank
-            // color the answers red
+            // if answer is wrong or blank answers red
+            //
             answerContainers[questionNumber].style.color = "red";
         }
     });
@@ -210,4 +254,6 @@ function showResults() {
    
 }
 submitButton.addEventListener("click", showResults);
+
+
 buildQuiz();
