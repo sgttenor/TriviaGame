@@ -1,6 +1,6 @@
 //timer
 function startTimer() {
-    var counter = 10;
+    var counter = 45;
     setInterval(function () {
         counter--;
         if (counter >= 0) {
@@ -10,7 +10,9 @@ function startTimer() {
         if (counter === 0) {
             $("#timer").html('Sorry, out of time');
             clearInterval(counter);
+            $("#time-results").html("<h3>YOU RAN OUT OF TIME!!!!</h3>");
             showResults();
+            
         }
     }, 1000);
 }
