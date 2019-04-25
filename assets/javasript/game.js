@@ -1,5 +1,6 @@
+//timer
 function startTimer() {
-    var counter = 5;
+    var counter = 10;
     setInterval(function () {
         counter--;
         if (counter >= 0) {
@@ -7,17 +8,22 @@ function startTimer() {
             span.innerHTML = counter;
         }
         if (counter === 0) {
-           $("#timer").html('Sorry, out of time');
+            $("#timer").html('Sorry, out of time');
             clearInterval(counter);
+            showResults();
         }
     }, 1000);
 }
 
+//Click start
 $("#gameStart").click(function () {
     startTimer();
+    
 });
 
 //question and answer array 
+const quizContainer = document.getElementById("quiz");
+const submitButton = document.getElementById("submit");
 const myQuestions = [
     {
         question: "What actress was Tom Cruise's first wife?",
@@ -41,7 +47,7 @@ const myQuestions = [
     {
         question: "One of the first science fiction films to be taken seriously by critics and movie-goers alike, this 1968 movie was made by Stanley Kubrick. Which film is this? ",
         answers: {
-            a: "Akien",
+            a: "Alien",
             b: "The Thing",
             c: "Space Balls",
             d: "2001: A Space Odyssey"
@@ -103,7 +109,7 @@ const myQuestions = [
         },
         correctAnswer: "b"
     },
-      {
+    {
         question: "In 'Short Circuit', military robot 'five' was subject to a power surge and developed a consciousness. It moved in with Ally Sheedy and adopted this name. ",
 
         answers: {
@@ -126,7 +132,80 @@ const myQuestions = [
         correctAnswer: "d"
     }
 ];
-//  Execute the run function.
-for( let i = 0; i < myQuestions.length; i++ ) {
-    console.log(myQuestions)
+
+//Create functoins for game
+
+function buildQuiz() {
+    //place to store HTML output
+    var output = [];
+
+    //for each question
+    myQuestions.forEach(
+
+        (currentQuestion, questionNumber) => {
+
+            const answers = [];
+
+            for (letter in currentQuestion.answers) {
+
+                answers.push(
+                    `<label>
+                      <input type="radio" name="question${questionNumber}"
+                value="${letter}">
+
+                       ${letter} :
+
+                       ${currentQuestion.answers[letter]}
+
+
+                    </label>`
+                );
+            }
+
+            output.push(
+                `<div class="question"> ${currentQuestion.question} </div>
+                <div class="answers"> ${answers.join('')} </div>`
+            );
+        }
+
+    );
+    $("#quiz").html(output.join(''));
+    
 }
+
+
+function showResults() {
+    // gather answer containers from our quiz
+    const answerContainers = quizContainer.querySelectorAll(".answers");
+
+    // keep track of user's answers
+    let numCorrect = 0;
+
+    // for each question...
+    myQuestions.forEach((currentQuestion, questionNumber) => {
+        // find selected answer
+        const answerContainer = answerContainers[questionNumber];
+        const selector = `input[name=question${questionNumber}]:checked`;
+        const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+
+        // if answer is correct
+        if (userAnswer === currentQuestion.correctAnswer) {
+            // add to the number of correct answers
+            numCorrect++;
+
+
+            // color the answers green
+            answerContainers[questionNumber].style.color = "lightgreen";
+        } else {
+            // if answer is wrong or blank
+            // color the answers red
+            answerContainers[questionNumber].style.color = "red";
+        }
+    });
+
+    // show number of correct answers out of total
+    $("#results").html("You Got " + numCorrect + " out of " + myQuestions.length);
+   
+}
+submitButton.addEventListener("click", showResults);
+buildQuiz();

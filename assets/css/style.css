@@ -11,3 +11,49 @@ h1, h2, p, #gamestart {
     font-style: italic;
     font-weight: 200;
 }
+
+#quiz {
+    line-height: 30px;
+    word-spacing: 2px;
+}
+
+radio {
+    word-spacing: 10px;
+}
+.question{
+    font-weight: 600;
+}
+.answers {
+  margin-bottom: 20px;
+}
+.answers label{
+  display: block;
+}
+#submit, #get-results{
+    font-family: sans-serif;
+    font-size: 20px;
+    background-color: #279;
+    color: #fff;
+    border: 0px;
+    border-radius: 3px;
+    padding: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    
+}
+#submit:hover, #get-results:hover{
+    background-color: #38a;
+}
+body{
+    font-size: 20px;
+    font-family: sans-serif;
+    color: #333;
+}
+
+.header, h1 {
+    background-image: url("https://i.ytimg.com/vi/2evJPL3SkXg/maxresdefault.jpg");
+    background-size: cover;
+    font-family: sans-serif;
+    font-weight: 550;
+    color: #ffffff !important;
+}

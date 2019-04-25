@@ -15,95 +15,53 @@
 </head>
 
 <body>
-    <div class="jumbotron jumbotron-fluid">
+    <div class="jumbotron jumbotron-fluid header">
         <div class="container">
-            <h1 class="display-4">TRIVIA TIME</h1>
-            <p class="lead">Choose the correct answer for the list of questions provided for you in the alloted amount
-                of time</p>
+            <h1 class="display-4">MOVIE TRIVIA TIME</h1>   
         </div>
     </div>
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h2 class="timer-countdown" id="timer">TIMER</h2>
+                <p class="lead">Choose the correct answer for the list of questions provided for you in the alloted amount
+                        of time</p>
+            <h2 class="timer-countdown postion-center" id="timer">TIMER</h2>
             <div id="startButtons">
                 <button id="gameStart">Start!</button>
             </div>
-        </div>   
+        </div>
     </div>
-    
+
     <div class="container">
         <div class="row">
-            <form>
-                <div class="form-group">
-                    <!-- Radio group !-->
-                    <label class="control-label">What actress was Tom Cruise's first wife?</label>
-                    <div class="radio">
-                        <label>
-                            <input type="radio" name='foo'>
-                            Mimi Rodgers
-                        </label>
-                    </div>
-                    <div class="radio">
-                        <label>
-                            <input type="radio" name='foo'>
-                            Nicole Kidman
-                        </label>
-                    </div>
-                    <div class="radio">
-                        <label>
-                            <input type="radio" name='foo'>
-                            Lea Thompson
-                        </label>
-                    </div>
+            <div id="quiz">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6-sm">
+                <div class="container">
+                    <button id="submit">Submit Answers</button>
                 </div>
-
-                <div class="row">
-                    <form>
-                        <div class="form-group">
-                            <!-- Radio group !-->
-                            <label class="control-label">In 2007, Jim Carrey starred in a film in which his character
-                                was obsessed with what number?</label>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" name='foo'>
-                                    23
-                                </label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" name='foo'>
-                                    34
-                                </label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" name='foo'>
-                                    71
-                                </label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" name='foo'>
-                                    7
-                                </label>
-                            </div>
-                    </form>
-
-                </div>
+            </div>
 
 
-                <!-- Optional JavaScript -->
-                <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-                <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-                    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-                    crossorigin="anonymous"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-                    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-                    crossorigin="anonymous"></script>
-                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-                    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-                    crossorigin="anonymous"></script>
-                <script src="assets/javasript/game.js"></script>
+            <div class="col-6-sm"> 
+                <div id="results"></div>
+            </div>
+        </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+        <script src="assets/javasript/game.js"></script>
 </body>
 
 </html>
