@@ -1,6 +1,6 @@
 //timer
 function startTimer() {
-    var counter = 100;
+    var counter = 90;
     setInterval(function () {
         //decrements the counter variable
         counter--;
@@ -239,7 +239,7 @@ const myQuestions = [
             a: "The Terminal",
             b: "Up In the Air",
             c: "Catch Me if You Can",
-            d: "Airplace"
+            d: "Airplane"
         },
         correctAnswer: "c"
     }
