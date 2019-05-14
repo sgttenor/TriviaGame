@@ -1,6 +1,6 @@
 //timer
 function startTimer() {
-    var counter = 90;
+    var counter = 110;
     setInterval(function () {
         //decrements the counter variable
         counter--;
@@ -15,6 +15,10 @@ function startTimer() {
             showResults();
         }
     }, 1000);
+}
+function stopTimer(){
+   clearInterval(setInterval);
+
 }
 
 //Click start
@@ -290,6 +294,7 @@ function buildQuiz() {
 
 
 function showResults() {
+    stopTimer();
     // gather answer containers from our quiz
     const answerContainers = quizContainer.querySelectorAll(".answers");
 
@@ -322,7 +327,7 @@ function showResults() {
     $("#results").html("You Got " + numCorrect + " out of " + myQuestions.length);
    
 }
-submitButton.addEventListener("click", showResults);
+submitButton.addEventListener("click", showResults, stopTimer);
 
 
 buildQuiz();
